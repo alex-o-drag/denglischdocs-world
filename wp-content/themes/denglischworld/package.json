@@ -1,55 +1,33 @@
 {
-	"name": "twentytwenty",
-	"version": "1.9.0",
-	"description": "Default WP Theme",
-	"author": "The WordPress Contributors",
-	"license": "GPL-2.0-or-later",
-	"keywords": [
-		"WordPress",
-		"Theme",
-		"TwentyTwenty"
-	],
-	"homepage": "https://wordpress.org/themes/twentytwenty/",
-	"bugs": {
-		"url": "https://core.trac.wordpress.org/"
-	},
-	"devDependencies": {
-		"@wordpress/browserslist-config": "^4.0.1",
-		"@wordpress/scripts": "^16.1.2",
-		"autoprefixer": "^10.4.0",
-		"concurrently": "^6.3.0",
-		"postcss-cli": "^9.0.2",
-		"postcss": "^8.3.11",
-		"rtlcss": "^3.5.0",
-		"stylelint-a11y": "^1.2.3"
-	},
-	"browserslist": [
-		"extends @wordpress/browserslist-config"
-	],
-	"rtlcssConfig": {
-		"options": {
-			"autoRename": false,
-			"autoRenameStrict": false,
-			"clean": true,
-			"greedy": false,
-			"processUrls": false,
-			"stringMap": []
-		},
-		"plugins": [],
-		"map": false
-	},
-	"scripts": {
-		"build": "npm run build:vendor-prefixes && npm run build:rtl",
-		"build:rtl": "concurrently \"npm run build:rtl-style\" \"npm run build:rtl-esb\" \"npm run build:rtl-esc\"",
-		"build:rtl-style": "rtlcss style.css style-rtl.css",
-		"build:rtl-esb": "rtlcss assets/css/editor-style-block.css assets/css/editor-style-block-rtl.css",
-		"build:rtl-esc": "rtlcss assets/css/editor-style-classic.css assets/css/editor-style-classic-rtl.css",
-		"build:vendor-prefixes": "concurrently \"npm run build:vendor-prefixes-style\" \"npm run build:vendor-prefixes-esb\" \"npm run build:vendor-prefixes-esc\"",
-		"build:vendor-prefixes-style": "postcss -r --no-map style.css assets/css/editor-style-block.css assets/css/editor-style-classic.css",
-		"build:vendor-prefixes-esb": "postcss -r --no-map assets/css/editor-style-block.css ",
-		"build:vendor-prefixes-esc": "postcss -r --no-map assets/css/editor-style-classic.css",
-		"lint:css": "wp-scripts lint-style 'style.css' 'assets/**/*.css'",
-		"lint:js": "wp-scripts lint-js 'assets/**/*.js'",
-		"lint:pkg-json": "wp-scripts lint-pkg-json"
-	}
+  "name": "simple-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.dev.js",
+    "build": "NODE_ENV=production webpack --config webpack.config.prod.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.8.4",
+    "css-loader": "^3.6.0",
+    "glob": "^7.1.6",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.0.8"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "tailwindcss": "^1.4.6"
+  }
 }
