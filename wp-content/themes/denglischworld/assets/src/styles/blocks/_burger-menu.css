@@ -1,0 +1,56 @@
+@layer components{
+  
+  .burger-menu{
+    width: 34px;
+    height: 34px;
+  }
+
+  .burger-menu span{
+    width: 16px;
+    height: 2px;
+    left: 50%;
+    
+  }
+
+  .burger-menu span:nth-child(1){
+    top: 10px;
+    transform: translate(-50%, 0);
+    transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s,transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  }
+
+  .burger-menu span:nth-child(2){
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .burger-menu span:nth-child(3){
+    transform: translate(-50%, 0);
+    bottom: 10px;
+    transition: bottom .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s,transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  }
+
+  .burger-menu:focus{
+    
+  }
+
+  .burger-menu:focus span:nth-child(1){
+    top: 50%;          
+    transform: translateX(-50%) translateY(0) rotate(45deg);
+    transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+    width: 20px;
+  }
+
+  .burger-menu:focus span:nth-child(2){
+    @apply opacity-0;
+  }
+
+  .burger-menu:focus span:nth-child(3){
+    bottom: 15px;
+    transform: translateX(-50%) translateY(0) rotate(-45deg);
+    transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) ,transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+    width: 20px;
+  }
+
+
+}

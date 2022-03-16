@@ -1,0 +1,59 @@
+@layer base{
+  html{
+    font-size: 16px;
+  }
+
+  .row{
+    @apply flex -mx-2 flex-wrap; 
+  }
+
+  .col{
+    @apply px-2;
+  }
+
+
+  .content-helper{
+    @apply bg-red-400 h-16 rounded w-full;
+  }
+
+  .container,
+  .container-large{
+    @apply px-4;
+  }
+}
+
+
+@layer components{
+
+  
+}
+
+@screen sm{
+  .content-helper{
+    @apply bg-blue-400;
+  }
+}
+
+@screen sm{
+  .content-helper{
+    @apply bg-yellow-400;
+  }
+}
+
+@screen md{
+  .content-helper{
+    @apply bg-blue-600;
+  }
+}
+
+@screen lg{
+  .content-helper{
+    @apply bg-green-200;
+  }
+}
+
+@screen xl{
+  .content-helper{
+    @apply bg-red-600;
+  }
+}

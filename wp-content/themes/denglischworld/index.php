@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-<div class="container mx-auto ">
+<div class="container">
   <div class="flex justify-center items-center h-64">
     <h1 class="text-2xl">
       Content here

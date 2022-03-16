@@ -5,8 +5,13 @@
 @tailwind utilities;
 
 
-@layer components{
-  .test{
-    @apply bg-green-500;
-  }
-}
+/* Global */
+@import 'styles/global/_layout.css';
+
+/* Partials */
+@import 'styles/partials/_header.css';
+@import 'styles/partials/_footer.css';
+
+/* Blocks */
+@import 'styles/blocks/_burger-menu.css';
+
